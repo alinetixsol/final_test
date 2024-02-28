@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
-import { Country } from 'src/relations/schemas/Country.scheme';
-import { language } from 'src/relations/schemas/Language.scheme';
-import { Relations } from 'src/relations/schemas/Relation.scheme';
+import { Country } from '../relations/schemas/Country.scheme';
+import { language } from '../relations/schemas/Language.scheme';
+import { Relations } from '..//relations/schemas/Relation.scheme';
 import { News } from './schemas/news.schema';
 import { retry } from 'rxjs';
 
