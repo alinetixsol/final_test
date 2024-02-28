@@ -1,0 +1,134 @@
+/* @import "./styles/style.scss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "bootstrap";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.pageWrapper {
+  min-height: 100vh;
+}
+
+.contentArea {
+  flex-grow: 1;
+  background-color: white;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.05);
+  margin-bottom: 30px;
+}
+
+.dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.05);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.circle-box {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.btn-white {
+  border: 1px solid #dee2e6;
+}
+
+.circle-box.lg-box {
+  width: 60px;
+  height: 60px;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+.circle-box.md-box {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.button-group .btn {
+  margin: 3px;
+}
+
+.simplebar-scrollbar:before {
+  background: #a0a0a0;
+}
+
+.apexcharts-toolbar {
+  z-index: 0 !important;
+}
+
+.sidebarArea {
+  flex-shrink: 0;
+  width: 260px;
+  background-color: #fff;
+  width: 260px;
+  background-color: #fff;
+
+
+
+}
+
+.sidebarArea .sidenav-bg:hover {
+  background-color: #F8F9FA;
+  border-radius: 0.3rem;
+}
+
+.sidebarArea {
+  @media (max-width: 1024px) {
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    margin-left: -260px;
+    transition: 0.2s ease-in;
+  }
+}
+
+.showSidebar {
+  margin-left: 0px;
+}
+
+.cursor-pointer-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+
+}
